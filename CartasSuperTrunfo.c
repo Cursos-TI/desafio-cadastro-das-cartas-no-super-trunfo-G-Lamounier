@@ -14,10 +14,10 @@
 
         //Comandos de entrada e saída da Primeira Carta
         printf("Digite, por favor, a sigla do seu estado: \n");
-        scanf("%s", estado1);
+        scanf(" %s", estado1);
     
         printf("Digite, por favor, o nome de sua cidade: \n");
-        scanf("%s", cidade1);
+        scanf(" %s", cidade1);
 
         printf("População: \n");
         scanf("%d", &populacao1);
@@ -34,7 +34,13 @@
         printf("Escolha uma Letra de 'A' a 'H' para a sua cidade e em seguida um número  de '01' a '04': \n");
         scanf("%s", codigo1);
 
-        printf("\nEstado: %s - Cidade: %s\nPopulação: %d\nÁrea da Cidade: %f\nPIB da Cidade: %f\nPontos Turísticos: %d\nCÓDIGO DE SUA CIDADE: %s\n", estado1, cidade1, populacao1, area1, pib1, pontosturisticos1, codigo1);
+        printf("\nEstado: %s - Cidade: %s\nPopulação: %d\nÁrea da Cidade: %.2f\nPIB da Cidade: %.2f\nPontos Turísticos: %d\nCÓDIGO DE SUA CIDADE: %s\n", estado1, cidade1, populacao1, area1, pib1, pontosturisticos1, codigo1);
+        
+        float densidade1 = (float) populacao1 / area1;
+        float percapita1 = pib1 / (float) populacao1;
+
+        printf("Densidade populacional: %.2fhab/km²\n", densidade1);
+        printf("PIB per Capita: %.2f reais\n", percapita1);
 
         // Define variáveis da Segunda Carta
         char estado2[20];
@@ -67,5 +73,11 @@
         printf("Escolha uma Letra de 'A' a 'H' para a sua cidade e em seguida um número  de '01' a '04': \n");
         scanf("%s", codigo2);
 
-        printf("\nEstado: %s - Cidade: %s\nPopulação: %d\nÁrea da Cidade: %f\nPIB da Cidade: %f\nPontos Turísticos: %d\nCÓDIGO DE SUA CIDADE: %s\n", estado2, cidade2, populacao2, area2, pib2, pontosturisticos2, codigo2);
-}
+        printf("\nEstado: %s - Cidade: %s\nPopulação: %d\nÁrea da Cidade: %.2f\nPIB da Cidade: %.2f\nPontos Turísticos: %d\nCÓDIGO DE SUA CIDADE: %s\n", estado2, cidade2, populacao2, area2, pib2, pontosturisticos2, codigo2);
+
+        float densidade2 = (float) populacao2 / area2;
+        float percapita2 = pib2 / (float) populacao2;
+
+        printf("Densidade populacional: %.2fhab/km²\n", densidade2);
+        printf("PIB per Capita: %.2f reais\n", percapita2);
+    }
